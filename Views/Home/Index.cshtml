@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="index-background">
+    <div class="container" id="scrape-container">
+        <div class="scrape-button">
+            @Html.ActionLink("SCRAPE", "ScrapedData", "Home", null, new { @id = "scrape-btn", @class = "link-decoration" });
+        </div>
+    </div>
+</div>

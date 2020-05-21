@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Scraped Data History";
+
+}
+
+<div class="container-fluid">
+    <div id="scrape-header">
+        <div class="text-center" style="font-size:2em">
+            <h1>Last 50 Scrapes</h1>
+        </div>
+        <table id="stock-table" class="table table-dark">
+            <tr>
+                <th>Symbol</th>
+                <th>LastPrice</th>
+                <th>Change</th>
+                <th>ChangePercentage</th>
+                <th>Currency</th>
+                <th>MarketTime</th>
+                <th>Volume</th>
+                <th>AvgVolume</th>
+                <th>MarketCap</th>
+            </tr>
+            @foreach (Stock stock in Model)
+            {
+                <tr>
+                    <td scope="col">@stock.Symbol</td>
+                    <td scope="col">@stock.LastPrice</td>
+                    <td scope="col">@stock.Change</td>
+                    <td scope="col">@stock.ChangePercentage</td>
+                    <td scope="col">@stock.Currency</td>
+                    <td scope="col">@stock.MarketTime</td>
+                    <td scope="col">@stock.Volume</td>
+                    <td scope="col">@stock.AvgVolume</td>
+                    <td scope="col">@stock.MarketCap</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
